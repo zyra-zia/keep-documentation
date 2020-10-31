@@ -1,0 +1,565 @@
+{
+  "contractName": "MockSatWeiPriceFeed",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "getPrice",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_price",
+          "type": "uint256"
+        }
+      ],
+      "name": "setPrice",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.17+commit.d19bba13\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[],\"name\":\"getPrice\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_price\",\"type\":\"uint256\"}],\"name\":\"setPrice\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{\"getPrice()\":{\"return\":\"The price of one satoshi in wei.\"}}},\"userdoc\":{\"methods\":{\"getPrice()\":{\"notice\":\"Get the current price of satoshi in wei.\"}}}},\"settings\":{\"compilationTarget\":{\"/C/Users/Zyra/Desktop/pfk/tbtc/solidity/contracts/test/price-feed/MockSatWeiPriceFeed.sol\":\"MockSatWeiPriceFeed\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/C/Users/Zyra/Desktop/pfk/tbtc/solidity/contracts/test/price-feed/MockSatWeiPriceFeed.sol\":{\"keccak256\":\"0xe16191e39b1acb9286f45271530c6e5e13235aba7eee4fa33df59a92b7ff3ef6\",\"urls\":[\"bzz-raw://67d710af70a0ee43ee3242b04ef4c9a1cc73e307bc65869682f871d7ce95855e\",\"dweb:/ipfs/QmPFhWPurf1EZUWbF3fguqvRdurWN2zoWgpEBftoqz3LgK\"]}},\"version\":1}",
+  "bytecode": "0x6080604052348015600f57600080fd5b5060ab8061001e6000396000f3fe6080604052348015600f57600080fd5b506004361060325760003560e01c806391b7f5ed14603757806398d5fdca146053575b600080fd5b605160048036036020811015604b57600080fd5b5035606b565b005b60596070565b60408051918252519081900360200190f35b600055565b6000549056fea265627a7a7231582073e4345ea208483c75c27e63e7cc33d2124075ae5dc51be0242f7fbab6a4c82464736f6c63430005110032",
+  "deployedBytecode": "0x6080604052348015600f57600080fd5b506004361060325760003560e01c806391b7f5ed14603757806398d5fdca146053575b600080fd5b605160048036036020811015604b57600080fd5b5035606b565b005b60596070565b60408051918252519081900360200190f35b600055565b6000549056fea265627a7a7231582073e4345ea208483c75c27e63e7cc33d2124075ae5dc51be0242f7fbab6a4c82464736f6c63430005110032",
+  "sourceMap": "27:359:37:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;27:359:37;;;;;;;",
+  "deployedSourceMap": "27:359:37:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;27:359:37;;;;;;;;;;;;;;;;;;;;;;;;307:74;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;307:74:37;;:::i;:::-;;202:97;;;:::i;:::-;;;;;;;;;;;;;;;;307:74;359:5;:14;307:74::o;202:97::-;254:7;286:5;202:97;:::o",
+  "source": "pragma solidity 0.5.17;\r\n\r\ncontract MockSatWeiPriceFeed{\r\n\r\n    uint256 private price;\r\n\r\n    /// @notice Get the current price of satoshi in wei.\r\n    /// @return The price of one satoshi in wei.\r\n    function getPrice()\r\n        external view returns (uint256)\r\n    {\r\n        return price;\r\n    }\r\n\r\n    function setPrice(uint256 _price) public {\r\n        price = _price;\r\n    }\r\n\r\n}\r\n",
+  "sourcePath": "C:/Users/Zyra/Desktop/pfk/tbtc/solidity/contracts/test/price-feed/MockSatWeiPriceFeed.sol",
+  "ast": {
+    "absolutePath": "/C/Users/Zyra/Desktop/pfk/tbtc/solidity/contracts/test/price-feed/MockSatWeiPriceFeed.sol",
+    "exportedSymbols": {
+      "MockSatWeiPriceFeed": [
+        10609
+      ]
+    },
+    "id": 10610,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 10588,
+        "literals": [
+          "solidity",
+          "0.5",
+          ".17"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:37"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 10609,
+        "linearizedBaseContracts": [
+          10609
+        ],
+        "name": "MockSatWeiPriceFeed",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 10590,
+            "name": "price",
+            "nodeType": "VariableDeclaration",
+            "scope": 10609,
+            "src": "64:21:37",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 10589,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "64:7:37",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": null,
+            "visibility": "private"
+          },
+          {
+            "body": {
+              "id": 10597,
+              "nodeType": "Block",
+              "src": "268:31:37",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 10595,
+                    "name": "price",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 10590,
+                    "src": "286:5:37",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 10594,
+                  "id": 10596,
+                  "nodeType": "Return",
+                  "src": "279:12:37"
+                }
+              ]
+            },
+            "documentation": "@notice Get the current price of satoshi in wei.\n @return The price of one satoshi in wei.",
+            "id": 10598,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getPrice",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 10591,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "219:2:37"
+            },
+            "returnParameters": {
+              "id": 10594,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 10593,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 10598,
+                  "src": "254:7:37",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 10592,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "254:7:37",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "253:9:37"
+            },
+            "scope": 10609,
+            "src": "202:97:37",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 10607,
+              "nodeType": "Block",
+              "src": "348:33:37",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 10605,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 10603,
+                      "name": "price",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 10590,
+                      "src": "359:5:37",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 10604,
+                      "name": "_price",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 10600,
+                      "src": "367:6:37",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "359:14:37",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 10606,
+                  "nodeType": "ExpressionStatement",
+                  "src": "359:14:37"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 10608,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setPrice",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 10601,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 10600,
+                  "name": "_price",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 10608,
+                  "src": "325:14:37",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 10599,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "325:7:37",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "324:16:37"
+            },
+            "returnParameters": {
+              "id": 10602,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "348:0:37"
+            },
+            "scope": 10609,
+            "src": "307:74:37",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 10610,
+        "src": "27:359:37"
+      }
+    ],
+    "src": "0:388:37"
+  },
+  "legacyAST": {
+    "absolutePath": "/C/Users/Zyra/Desktop/pfk/tbtc/solidity/contracts/test/price-feed/MockSatWeiPriceFeed.sol",
+    "exportedSymbols": {
+      "MockSatWeiPriceFeed": [
+        10609
+      ]
+    },
+    "id": 10610,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 10588,
+        "literals": [
+          "solidity",
+          "0.5",
+          ".17"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:37"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 10609,
+        "linearizedBaseContracts": [
+          10609
+        ],
+        "name": "MockSatWeiPriceFeed",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 10590,
+            "name": "price",
+            "nodeType": "VariableDeclaration",
+            "scope": 10609,
+            "src": "64:21:37",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 10589,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "64:7:37",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": null,
+            "visibility": "private"
+          },
+          {
+            "body": {
+              "id": 10597,
+              "nodeType": "Block",
+              "src": "268:31:37",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 10595,
+                    "name": "price",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 10590,
+                    "src": "286:5:37",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 10594,
+                  "id": 10596,
+                  "nodeType": "Return",
+                  "src": "279:12:37"
+                }
+              ]
+            },
+            "documentation": "@notice Get the current price of satoshi in wei.\n @return The price of one satoshi in wei.",
+            "id": 10598,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getPrice",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 10591,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "219:2:37"
+            },
+            "returnParameters": {
+              "id": 10594,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 10593,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 10598,
+                  "src": "254:7:37",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 10592,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "254:7:37",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "253:9:37"
+            },
+            "scope": 10609,
+            "src": "202:97:37",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 10607,
+              "nodeType": "Block",
+              "src": "348:33:37",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 10605,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 10603,
+                      "name": "price",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 10590,
+                      "src": "359:5:37",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 10604,
+                      "name": "_price",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 10600,
+                      "src": "367:6:37",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "359:14:37",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 10606,
+                  "nodeType": "ExpressionStatement",
+                  "src": "359:14:37"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 10608,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setPrice",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 10601,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 10600,
+                  "name": "_price",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 10608,
+                  "src": "325:14:37",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 10599,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "325:7:37",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "324:16:37"
+            },
+            "returnParameters": {
+              "id": 10602,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "348:0:37"
+            },
+            "scope": 10609,
+            "src": "307:74:37",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 10610,
+        "src": "27:359:37"
+      }
+    ],
+    "src": "0:388:37"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.17+commit.d19bba13.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.3.1",
+  "updatedAt": "2020-10-27T11:33:58.709Z",
+  "devdoc": {
+    "methods": {
+      "getPrice()": {
+        "return": "The price of one satoshi in wei."
+      }
+    }
+  },
+  "userdoc": {
+    "methods": {
+      "getPrice()": {
+        "notice": "Get the current price of satoshi in wei."
+      }
+    }
+  }
+}

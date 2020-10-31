@@ -1,0 +1,426 @@
+{
+  "contractName": "IMedianizer",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "read",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "peek",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        },
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.17+commit.d19bba13\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[],\"name\":\"peek\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"},{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"read\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"details\":\"Based off the MakerDAO medianizer (https://github.com/makerdao/median)\",\"methods\":{\"peek()\":{\"details\":\"May revert if caller not whitelisted.\",\"return\":\"Designated price with 18 decimal places.true if price is > 0, else returns false\"},\"read()\":{\"details\":\"May revert if caller not whitelisted.\",\"return\":\"Designated price with 18 decimal places.\"}}},\"userdoc\":{\"methods\":{\"peek()\":{\"notice\":\"Get the current price and check if the price feed is active\"},\"read()\":{\"notice\":\"Get the current price.\"}},\"notice\":\"A medianizer price feed.\"}},\"settings\":{\"compilationTarget\":{\"/C/Users/Zyra/Desktop/pfk/tbtc/solidity/contracts/external/IMedianizer.sol\":\"IMedianizer\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/C/Users/Zyra/Desktop/pfk/tbtc/solidity/contracts/external/IMedianizer.sol\":{\"keccak256\":\"0xc3feecf95e754351ff4df765f299b406f1adfe3c67f4a3dff6cb915dc044e3a1\",\"urls\":[\"bzz-raw://f8e3564b6d29733b5c27aaca0b6e04ab2d9026744a9ebe90d8e3038aca2d661b\",\"dweb:/ipfs/QmRKrr8a6ctj55YzkftmQqhfemgdhEL7S2dFM7S82294C1\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "pragma solidity 0.5.17;\r\n\r\n/// @notice A medianizer price feed.\r\n/// @dev Based off the MakerDAO medianizer (https://github.com/makerdao/median)\r\ninterface IMedianizer {\r\n    /// @notice Get the current price.\r\n    /// @dev May revert if caller not whitelisted.\r\n    /// @return Designated price with 18 decimal places.\r\n    function read() external view returns (uint256);\r\n\r\n    /// @notice Get the current price and check if the price feed is active\r\n    /// @dev May revert if caller not whitelisted.\r\n    /// @return Designated price with 18 decimal places.\r\n    /// @return true if price is > 0, else returns false\r\n    function peek() external view returns (uint256, bool);\r\n}\r\n",
+  "sourcePath": "C:\\Users\\Zyra\\Desktop\\pfk\\tbtc\\solidity\\contracts\\external\\IMedianizer.sol",
+  "ast": {
+    "absolutePath": "/C/Users/Zyra/Desktop/pfk/tbtc/solidity/contracts/external/IMedianizer.sol",
+    "exportedSymbols": {
+      "IMedianizer": [
+        5433
+      ]
+    },
+    "id": 5434,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 5420,
+        "literals": [
+          "solidity",
+          "0.5",
+          ".17"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:9"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": "@notice A medianizer price feed.\n @dev Based off the MakerDAO medianizer (https://github.com/makerdao/median)",
+        "fullyImplemented": false,
+        "id": 5433,
+        "linearizedBaseContracts": [
+          5433
+        ],
+        "name": "IMedianizer",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": "@notice Get the current price.\n @dev May revert if caller not whitelisted.\n @return Designated price with 18 decimal places.",
+            "id": 5425,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "read",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 5421,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "338:2:9"
+            },
+            "returnParameters": {
+              "id": 5424,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 5423,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5425,
+                  "src": "364:7:9",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 5422,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "364:7:9",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "363:9:9"
+            },
+            "scope": 5433,
+            "src": "325:48:9",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": "@notice Get the current price and check if the price feed is active\n @dev May revert if caller not whitelisted.\n @return Designated price with 18 decimal places.\n @return true if price is > 0, else returns false",
+            "id": 5432,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "peek",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 5426,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "639:2:9"
+            },
+            "returnParameters": {
+              "id": 5431,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 5428,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5432,
+                  "src": "665:7:9",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 5427,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "665:7:9",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 5430,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5432,
+                  "src": "674:4:9",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 5429,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "674:4:9",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "664:15:9"
+            },
+            "scope": 5433,
+            "src": "626:54:9",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          }
+        ],
+        "scope": 5434,
+        "src": "146:537:9"
+      }
+    ],
+    "src": "0:685:9"
+  },
+  "legacyAST": {
+    "absolutePath": "/C/Users/Zyra/Desktop/pfk/tbtc/solidity/contracts/external/IMedianizer.sol",
+    "exportedSymbols": {
+      "IMedianizer": [
+        5433
+      ]
+    },
+    "id": 5434,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 5420,
+        "literals": [
+          "solidity",
+          "0.5",
+          ".17"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:9"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": "@notice A medianizer price feed.\n @dev Based off the MakerDAO medianizer (https://github.com/makerdao/median)",
+        "fullyImplemented": false,
+        "id": 5433,
+        "linearizedBaseContracts": [
+          5433
+        ],
+        "name": "IMedianizer",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": "@notice Get the current price.\n @dev May revert if caller not whitelisted.\n @return Designated price with 18 decimal places.",
+            "id": 5425,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "read",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 5421,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "338:2:9"
+            },
+            "returnParameters": {
+              "id": 5424,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 5423,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5425,
+                  "src": "364:7:9",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 5422,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "364:7:9",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "363:9:9"
+            },
+            "scope": 5433,
+            "src": "325:48:9",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": "@notice Get the current price and check if the price feed is active\n @dev May revert if caller not whitelisted.\n @return Designated price with 18 decimal places.\n @return true if price is > 0, else returns false",
+            "id": 5432,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "peek",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 5426,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "639:2:9"
+            },
+            "returnParameters": {
+              "id": 5431,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 5428,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5432,
+                  "src": "665:7:9",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 5427,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "665:7:9",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 5430,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5432,
+                  "src": "674:4:9",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 5429,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "674:4:9",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "664:15:9"
+            },
+            "scope": 5433,
+            "src": "626:54:9",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          }
+        ],
+        "scope": 5434,
+        "src": "146:537:9"
+      }
+    ],
+    "src": "0:685:9"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.17+commit.d19bba13.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.3.1",
+  "updatedAt": "2020-10-27T11:33:58.529Z",
+  "devdoc": {
+    "details": "Based off the MakerDAO medianizer (https://github.com/makerdao/median)",
+    "methods": {
+      "peek()": {
+        "details": "May revert if caller not whitelisted.",
+        "return": "Designated price with 18 decimal places.true if price is > 0, else returns false"
+      },
+      "read()": {
+        "details": "May revert if caller not whitelisted.",
+        "return": "Designated price with 18 decimal places."
+      }
+    }
+  },
+  "userdoc": {
+    "methods": {
+      "peek()": {
+        "notice": "Get the current price and check if the price feed is active"
+      },
+      "read()": {
+        "notice": "Get the current price."
+      }
+    },
+    "notice": "A medianizer price feed."
+  }
+}

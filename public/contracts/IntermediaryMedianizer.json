@@ -1,0 +1,1588 @@
+{
+  "contractName": "IntermediaryMedianizer",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "contract IMedianizer",
+          "name": "realMedianizer",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "previousOwner",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "OwnershipTransferred",
+      "type": "event"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "isOwner",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "owner",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "renounceOwnership",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "transferOwnership",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "getMedianizer",
+      "outputs": [
+        {
+          "internalType": "contract IMedianizer",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "peek",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        },
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "read",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "contract IMedianizer",
+          "name": "realMedianizer",
+          "type": "address"
+        }
+      ],
+      "name": "setMedianizer",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.17+commit.d19bba13\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"contract IMedianizer\",\"name\":\"realMedianizer\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"previousOwner\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"OwnershipTransferred\",\"type\":\"event\"},{\"constant\":true,\"inputs\":[],\"name\":\"getMedianizer\",\"outputs\":[{\"internalType\":\"contract IMedianizer\",\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"isOwner\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"owner\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"peek\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"},{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"read\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[],\"name\":\"renounceOwnership\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"contract IMedianizer\",\"name\":\"realMedianizer\",\"type\":\"address\"}],\"name\":\"setMedianizer\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"address\",\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"transferOwnership\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"details\":\"This is used in Keep testnets where Maker has deployed a Medianizer      instance that needs to authorize a single consumer, to enable multiple      tBTC deployments to happen in the background and be pointed at a stable      medianizer instance that is authorized on the Maker contract. It allows      the updating of the backing medianizer and therefore is NOT suitable      for mainnet deployment.\",\"methods\":{\"isOwner()\":{\"details\":\"Returns true if the caller is the current owner.\"},\"owner()\":{\"details\":\"Returns the address of the current owner.\"},\"renounceOwnership()\":{\"details\":\"Leaves the contract without owner. It will not be possible to call `onlyOwner` functions anymore. Can only be called by the current owner.     * > Note: Renouncing ownership will leave the contract without an owner, thereby removing any functionality that is only available to the owner.\"},\"transferOwnership(address)\":{\"details\":\"Transfers ownership of the contract to a new account (`newOwner`). Can only be called by the current owner.\"}},\"title\":\"IntermediaryMedianizer is an updatable intermediary between a real        medianizer and IMedianizer users.\"},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/C/Users/Zyra/Desktop/pfk/tbtc/solidity/contracts/test/price-feed/IntermediaryMedianizer.sol\":\"IntermediaryMedianizer\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/C/Users/Zyra/Desktop/pfk/tbtc/solidity/contracts/external/IMedianizer.sol\":{\"keccak256\":\"0xc3feecf95e754351ff4df765f299b406f1adfe3c67f4a3dff6cb915dc044e3a1\",\"urls\":[\"bzz-raw://f8e3564b6d29733b5c27aaca0b6e04ab2d9026744a9ebe90d8e3038aca2d661b\",\"dweb:/ipfs/QmRKrr8a6ctj55YzkftmQqhfemgdhEL7S2dFM7S82294C1\"]},\"/C/Users/Zyra/Desktop/pfk/tbtc/solidity/contracts/test/price-feed/IntermediaryMedianizer.sol\":{\"keccak256\":\"0x1726880e8f276a3363841655b7fd250e4be2edb8ed59f573251c8e3be2459e92\",\"urls\":[\"bzz-raw://7941e41e4fbceead5defd31bd900821febbd1f5c16c3db7ebf7b9dfe3312a85d\",\"dweb:/ipfs/QmPMzPnaJ1eygxQkrQP9ybLer7QFqZbDAAuLV9S5eEFwD6\"]},\"openzeppelin-solidity/contracts/ownership/Ownable.sol\":{\"keccak256\":\"0xf79fb10e8235770eb4aea7249034076a3cc9f9119ad944fc48705bae9c9d20dc\",\"urls\":[\"bzz-raw://cd3429aa9a4878dcf6c73faa32c3722f4013d4be012ece543b246faa6b50f55c\",\"dweb:/ipfs/QmS55hgTvNEAKinus19m65CB4wcymN8EiUPFpRx5tYJ1i2\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b506040516105b73803806105b78339818101604052602081101561003357600080fd5b5051600080546001600160a01b03191633178082556040516001600160a01b039190911691907f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e0908290a3600180546001600160a01b0319166001600160a01b039290921691909117905561050a806100ad6000396000f3fe608060405234801561001057600080fd5b50600436106100885760003560e01c80638da5cb5b1161005b5780638da5cb5b146100f65780638f32d59b146100fe578063e7baf8dd1461011a578063f2fde38b1461014057610088565b8063242043491461008d57806357de26a4146100b157806359e02dd7146100cb578063715018a6146100ec575b600080fd5b610095610166565b604080516001600160a01b039092168252519081900360200190f35b6100b9610175565b60408051918252519081900360200190f35b6100d36101eb565b6040805192835290151560208301528051918290030190f35b6100f461026c565b005b61009561030f565b61010661031e565b604080519115158252519081900360200190f35b6100f46004803603602081101561013057600080fd5b50356001600160a01b031661032f565b6100f46004803603602081101561015657600080fd5b50356001600160a01b03166103aa565b6001546001600160a01b031690565b600154604080516315f789a960e21b815290516000926001600160a01b0316916357de26a4916004808301926020929190829003018186803b1580156101ba57600080fd5b505afa1580156101ce573d6000803e3d6000fd5b505050506040513d60208110156101e457600080fd5b5051905090565b600154604080516359e02dd760e01b8152815160009384936001600160a01b03909116926359e02dd79260048083019392829003018186803b15801561023057600080fd5b505afa158015610244573d6000803e3d6000fd5b505050506040513d604081101561025a57600080fd5b50805160209091015190925090509091565b61027461031e565b6102c5576040805162461bcd60e51b815260206004820181905260248201527f4f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e6572604482015290519081900360640190fd5b600080546040516001600160a01b03909116907f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e0908390a3600080546001600160a01b0319169055565b6000546001600160a01b031690565b6000546001600160a01b0316331490565b61033761031e565b610388576040805162461bcd60e51b815260206004820181905260248201527f4f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e6572604482015290519081900360640190fd5b600180546001600160a01b0319166001600160a01b0392909216919091179055565b6103b261031e565b610403576040805162461bcd60e51b815260206004820181905260248201527f4f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e6572604482015290519081900360640190fd5b61040c8161040f565b50565b6001600160a01b0381166104545760405162461bcd60e51b81526004018080602001828103825260268152602001806104b06026913960400191505060405180910390fd5b600080546040516001600160a01b03808516939216917f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e091a3600080546001600160a01b0319166001600160a01b039290921691909117905556fe4f776e61626c653a206e6577206f776e657220697320746865207a65726f2061646472657373a265627a7a7231582037f571292c70831cb38fa879be7a1e47ac0a6040237aafc2d5ee472d9cdbc35564736f6c63430005110032",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100885760003560e01c80638da5cb5b1161005b5780638da5cb5b146100f65780638f32d59b146100fe578063e7baf8dd1461011a578063f2fde38b1461014057610088565b8063242043491461008d57806357de26a4146100b157806359e02dd7146100cb578063715018a6146100ec575b600080fd5b610095610166565b604080516001600160a01b039092168252519081900360200190f35b6100b9610175565b60408051918252519081900360200190f35b6100d36101eb565b6040805192835290151560208301528051918290030190f35b6100f461026c565b005b61009561030f565b61010661031e565b604080519115158252519081900360200190f35b6100f46004803603602081101561013057600080fd5b50356001600160a01b031661032f565b6100f46004803603602081101561015657600080fd5b50356001600160a01b03166103aa565b6001546001600160a01b031690565b600154604080516315f789a960e21b815290516000926001600160a01b0316916357de26a4916004808301926020929190829003018186803b1580156101ba57600080fd5b505afa1580156101ce573d6000803e3d6000fd5b505050506040513d60208110156101e457600080fd5b5051905090565b600154604080516359e02dd760e01b8152815160009384936001600160a01b03909116926359e02dd79260048083019392829003018186803b15801561023057600080fd5b505afa158015610244573d6000803e3d6000fd5b505050506040513d604081101561025a57600080fd5b50805160209091015190925090509091565b61027461031e565b6102c5576040805162461bcd60e51b815260206004820181905260248201527f4f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e6572604482015290519081900360640190fd5b600080546040516001600160a01b03909116907f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e0908390a3600080546001600160a01b0319169055565b6000546001600160a01b031690565b6000546001600160a01b0316331490565b61033761031e565b610388576040805162461bcd60e51b815260206004820181905260248201527f4f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e6572604482015290519081900360640190fd5b600180546001600160a01b0319166001600160a01b0392909216919091179055565b6103b261031e565b610403576040805162461bcd60e51b815260206004820181905260248201527f4f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e6572604482015290519081900360640190fd5b61040c8161040f565b50565b6001600160a01b0381166104545760405162461bcd60e51b81526004018080602001828103825260268152602001806104b06026913960400191505060405180910390fd5b600080546040516001600160a01b03808516939216917f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e091a3600080546001600160a01b0319166001600160a01b039290921691909117905556fe4f776e61626c653a206e6577206f776e657220697320746865207a65726f2061646472657373a265627a7a7231582037f571292c70831cb38fa879be7a1e47ac0a6040237aafc2d5ee472d9cdbc35564736f6c63430005110032",
+  "sourceMap": "710:659:35:-;;;817:98;8:9:-1;5:2;;;30:1;27;20:12;5:2;817:98:35;;;;;;;;;;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;817:98:35;657:6:60;:19;;-1:-1:-1;;;;;;657:19:60;666:10;657:19;;;;691:40;;-1:-1:-1;;;;;724:6:60;;;;;657;691:40;;657:6;;691:40;875:15:35;:32;;-1:-1:-1;;;;;;875:32:35;-1:-1:-1;;;;;875:32:35;;;;;;;;;;710:659;;;-1:-1:-1;710:659:35;;",
+  "deployedSourceMap": "710:659:35:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;710:659:35;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;923:102;;;:::i;:::-;;;;-1:-1:-1;;;;;923:102:35;;;;;;;;;;;;;;1143:96;;;:::i;:::-;;;;;;;;;;;;;;;;1033:102;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;1599:137:60;;;:::i;:::-;;814:77;;;:::i;1165:90::-;;;:::i;:::-;;;;;;;;;;;;;;;;;;1247:119:35;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;1247:119:35;-1:-1:-1;;;;;1247:119:35;;:::i;1885:107:60:-;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;1885:107:60;-1:-1:-1;;;;;1885:107:60;;:::i;923:102:35:-;1002:15;;-1:-1:-1;;;;;1002:15:35;923:102;:::o;1143:96::-;1209:15;;:22;;;-1:-1:-1;;;1209:22:35;;;;1182:7;;-1:-1:-1;;;;;1209:15:35;;:20;;:22;;;;;;;;;;;;;;:15;:22;;;5:2:-1;;;;30:1;27;20:12;5:2;1209:22:35;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;1209:22:35;;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;1209:22:35;;-1:-1:-1;1143:96:35;:::o;1033:102::-;1105:15;;:22;;;-1:-1:-1;;;1105:22:35;;;;1072:7;;;;-1:-1:-1;;;;;1105:15:35;;;;:20;;:22;;;;;;;;;;;:15;:22;;;5:2:-1;;;;30:1;27;20:12;5:2;1105:22:35;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;1105:22:35;;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;1105:22:35;;;;;;;;;-1:-1:-1;1105:22:35;-1:-1:-1;1033:102:35;;:::o;1599:137:60:-;1018:9;:7;:9::i;:::-;1010:54;;;;;-1:-1:-1;;;1010:54:60;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1697:1;1681:6;;1660:40;;-1:-1:-1;;;;;1681:6:60;;;;1660:40;;1697:1;;1660:40;1727:1;1710:19;;-1:-1:-1;;;;;;1710:19:60;;;1599:137::o;814:77::-;852:7;878:6;-1:-1:-1;;;;;878:6:60;814:77;:::o;1165:90::-;1205:4;1242:6;-1:-1:-1;;;;;1242:6:60;1228:10;:20;;1165:90::o;1247:119:35:-;1018:9:60;:7;:9::i;:::-;1010:54;;;;;-1:-1:-1;;;1010:54:60;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1326:15:35;:32;;-1:-1:-1;;;;;;1326:32:35;-1:-1:-1;;;;;1326:32:35;;;;;;;;;;1247:119::o;1885:107:60:-;1018:9;:7;:9::i;:::-;1010:54;;;;;-1:-1:-1;;;1010:54:60;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1957:28;1976:8;1957:18;:28::i;:::-;1885:107;:::o;2093:225::-;-1:-1:-1;;;;;2166:22:60;;2158:73;;;;-1:-1:-1;;;2158:73:60;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;2267:6;;;2246:38;;-1:-1:-1;;;;;2246:38:60;;;;2267:6;;;2246:38;;;2294:6;:17;;-1:-1:-1;;;;;;2294:17:60;-1:-1:-1;;;;;2294:17:60;;;;;;;;;;2093:225::o",
+  "source": "pragma solidity 0.5.17;\r\n\r\nimport \"openzeppelin-solidity/contracts/ownership/Ownable.sol\";\r\nimport \"../../../contracts/external/IMedianizer.sol\";\r\n\r\n/// @title IntermediaryMedianizer is an updatable intermediary between a real\r\n///        medianizer and IMedianizer users.\r\n/// @dev This is used in Keep testnets where Maker has deployed a Medianizer\r\n///      instance that needs to authorize a single consumer, to enable multiple\r\n///      tBTC deployments to happen in the background and be pointed at a stable\r\n///      medianizer instance that is authorized on the Maker contract. It allows\r\n///      the updating of the backing medianizer and therefore is NOT suitable\r\n///      for mainnet deployment.\r\ncontract IntermediaryMedianizer is Ownable, IMedianizer {\r\n    IMedianizer private _realMedianizer;\r\n\r\n    constructor(IMedianizer realMedianizer) public {\r\n        _realMedianizer = realMedianizer;\r\n    }\r\n\r\n    function getMedianizer() external view returns (IMedianizer) {\r\n        return _realMedianizer;\r\n    }\r\n\r\n    function peek() external view returns (uint256, bool) {\r\n        return _realMedianizer.peek();\r\n    }\r\n\r\n    function read() external view returns (uint256) {\r\n        return _realMedianizer.read();\r\n    }\r\n\r\n    function setMedianizer(IMedianizer realMedianizer) public onlyOwner {\r\n        _realMedianizer = realMedianizer;\r\n    }\r\n}\r\n",
+  "sourcePath": "C:/Users/Zyra/Desktop/pfk/tbtc/solidity/contracts/test/price-feed/IntermediaryMedianizer.sol",
+  "ast": {
+    "absolutePath": "/C/Users/Zyra/Desktop/pfk/tbtc/solidity/contracts/test/price-feed/IntermediaryMedianizer.sol",
+    "exportedSymbols": {
+      "IntermediaryMedianizer": [
+        10534
+      ]
+    },
+    "id": 10535,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 10473,
+        "literals": [
+          "solidity",
+          "0.5",
+          ".17"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:35"
+      },
+      {
+        "absolutePath": "openzeppelin-solidity/contracts/ownership/Ownable.sol",
+        "file": "openzeppelin-solidity/contracts/ownership/Ownable.sol",
+        "id": 10474,
+        "nodeType": "ImportDirective",
+        "scope": 10535,
+        "sourceUnit": 16916,
+        "src": "27:63:35",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/C/Users/Zyra/Desktop/pfk/tbtc/solidity/contracts/external/IMedianizer.sol",
+        "file": "../../../contracts/external/IMedianizer.sol",
+        "id": 10475,
+        "nodeType": "ImportDirective",
+        "scope": 10535,
+        "sourceUnit": 5434,
+        "src": "92:53:35",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 10476,
+              "name": "Ownable",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 16915,
+              "src": "745:7:35",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_Ownable_$16915",
+                "typeString": "contract Ownable"
+              }
+            },
+            "id": 10477,
+            "nodeType": "InheritanceSpecifier",
+            "src": "745:7:35"
+          },
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 10478,
+              "name": "IMedianizer",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 5433,
+              "src": "754:11:35",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_IMedianizer_$5433",
+                "typeString": "contract IMedianizer"
+              }
+            },
+            "id": 10479,
+            "nodeType": "InheritanceSpecifier",
+            "src": "754:11:35"
+          }
+        ],
+        "contractDependencies": [
+          5433,
+          16915
+        ],
+        "contractKind": "contract",
+        "documentation": "@title IntermediaryMedianizer is an updatable intermediary between a real\n        medianizer and IMedianizer users.\n @dev This is used in Keep testnets where Maker has deployed a Medianizer\n      instance that needs to authorize a single consumer, to enable multiple\n      tBTC deployments to happen in the background and be pointed at a stable\n      medianizer instance that is authorized on the Maker contract. It allows\n      the updating of the backing medianizer and therefore is NOT suitable\n      for mainnet deployment.",
+        "fullyImplemented": true,
+        "id": 10534,
+        "linearizedBaseContracts": [
+          10534,
+          5433,
+          16915
+        ],
+        "name": "IntermediaryMedianizer",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 10481,
+            "name": "_realMedianizer",
+            "nodeType": "VariableDeclaration",
+            "scope": 10534,
+            "src": "773:35:35",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_contract$_IMedianizer_$5433",
+              "typeString": "contract IMedianizer"
+            },
+            "typeName": {
+              "contractScope": null,
+              "id": 10480,
+              "name": "IMedianizer",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 5433,
+              "src": "773:11:35",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_IMedianizer_$5433",
+                "typeString": "contract IMedianizer"
+              }
+            },
+            "value": null,
+            "visibility": "private"
+          },
+          {
+            "body": {
+              "id": 10490,
+              "nodeType": "Block",
+              "src": "864:51:35",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 10488,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 10486,
+                      "name": "_realMedianizer",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 10481,
+                      "src": "875:15:35",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_IMedianizer_$5433",
+                        "typeString": "contract IMedianizer"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 10487,
+                      "name": "realMedianizer",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 10483,
+                      "src": "893:14:35",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_IMedianizer_$5433",
+                        "typeString": "contract IMedianizer"
+                      }
+                    },
+                    "src": "875:32:35",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IMedianizer_$5433",
+                      "typeString": "contract IMedianizer"
+                    }
+                  },
+                  "id": 10489,
+                  "nodeType": "ExpressionStatement",
+                  "src": "875:32:35"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 10491,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 10484,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 10483,
+                  "name": "realMedianizer",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 10491,
+                  "src": "829:26:35",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_IMedianizer_$5433",
+                    "typeString": "contract IMedianizer"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 10482,
+                    "name": "IMedianizer",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 5433,
+                    "src": "829:11:35",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IMedianizer_$5433",
+                      "typeString": "contract IMedianizer"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "828:28:35"
+            },
+            "returnParameters": {
+              "id": 10485,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "864:0:35"
+            },
+            "scope": 10534,
+            "src": "817:98:35",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 10498,
+              "nodeType": "Block",
+              "src": "984:41:35",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 10496,
+                    "name": "_realMedianizer",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 10481,
+                    "src": "1002:15:35",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IMedianizer_$5433",
+                      "typeString": "contract IMedianizer"
+                    }
+                  },
+                  "functionReturnParameters": 10495,
+                  "id": 10497,
+                  "nodeType": "Return",
+                  "src": "995:22:35"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 10499,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getMedianizer",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 10492,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "945:2:35"
+            },
+            "returnParameters": {
+              "id": 10495,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 10494,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 10499,
+                  "src": "971:11:35",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_IMedianizer_$5433",
+                    "typeString": "contract IMedianizer"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 10493,
+                    "name": "IMedianizer",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 5433,
+                    "src": "971:11:35",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IMedianizer_$5433",
+                      "typeString": "contract IMedianizer"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "970:13:35"
+            },
+            "scope": 10534,
+            "src": "923:102:35",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 10510,
+              "nodeType": "Block",
+              "src": "1087:48:35",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [],
+                    "expression": {
+                      "argumentTypes": [],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 10506,
+                        "name": "_realMedianizer",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 10481,
+                        "src": "1105:15:35",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_IMedianizer_$5433",
+                          "typeString": "contract IMedianizer"
+                        }
+                      },
+                      "id": 10507,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "peek",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 5432,
+                      "src": "1105:20:35",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_external_view$__$returns$_t_uint256_$_t_bool_$",
+                        "typeString": "function () view external returns (uint256,bool)"
+                      }
+                    },
+                    "id": 10508,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1105:22:35",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$_t_uint256_$_t_bool_$",
+                      "typeString": "tuple(uint256,bool)"
+                    }
+                  },
+                  "functionReturnParameters": 10505,
+                  "id": 10509,
+                  "nodeType": "Return",
+                  "src": "1098:29:35"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 10511,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "peek",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 10500,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1046:2:35"
+            },
+            "returnParameters": {
+              "id": 10505,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 10502,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 10511,
+                  "src": "1072:7:35",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 10501,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1072:7:35",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 10504,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 10511,
+                  "src": "1081:4:35",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 10503,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1081:4:35",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1071:15:35"
+            },
+            "scope": 10534,
+            "src": "1033:102:35",
+            "stateMutability": "view",
+            "superFunction": 5432,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 10520,
+              "nodeType": "Block",
+              "src": "1191:48:35",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [],
+                    "expression": {
+                      "argumentTypes": [],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 10516,
+                        "name": "_realMedianizer",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 10481,
+                        "src": "1209:15:35",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_IMedianizer_$5433",
+                          "typeString": "contract IMedianizer"
+                        }
+                      },
+                      "id": 10517,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "read",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 5425,
+                      "src": "1209:20:35",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_external_view$__$returns$_t_uint256_$",
+                        "typeString": "function () view external returns (uint256)"
+                      }
+                    },
+                    "id": 10518,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1209:22:35",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 10515,
+                  "id": 10519,
+                  "nodeType": "Return",
+                  "src": "1202:29:35"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 10521,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "read",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 10512,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1156:2:35"
+            },
+            "returnParameters": {
+              "id": 10515,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 10514,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 10521,
+                  "src": "1182:7:35",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 10513,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1182:7:35",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1181:9:35"
+            },
+            "scope": 10534,
+            "src": "1143:96:35",
+            "stateMutability": "view",
+            "superFunction": 5425,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 10532,
+              "nodeType": "Block",
+              "src": "1315:51:35",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 10530,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 10528,
+                      "name": "_realMedianizer",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 10481,
+                      "src": "1326:15:35",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_IMedianizer_$5433",
+                        "typeString": "contract IMedianizer"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 10529,
+                      "name": "realMedianizer",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 10523,
+                      "src": "1344:14:35",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_IMedianizer_$5433",
+                        "typeString": "contract IMedianizer"
+                      }
+                    },
+                    "src": "1326:32:35",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IMedianizer_$5433",
+                      "typeString": "contract IMedianizer"
+                    }
+                  },
+                  "id": 10531,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1326:32:35"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 10533,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [
+              {
+                "arguments": null,
+                "id": 10526,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 10525,
+                  "name": "onlyOwner",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 16848,
+                  "src": "1305:9:35",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_modifier$__$",
+                    "typeString": "modifier ()"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "1305:9:35"
+              }
+            ],
+            "name": "setMedianizer",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 10524,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 10523,
+                  "name": "realMedianizer",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 10533,
+                  "src": "1270:26:35",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_IMedianizer_$5433",
+                    "typeString": "contract IMedianizer"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 10522,
+                    "name": "IMedianizer",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 5433,
+                    "src": "1270:11:35",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IMedianizer_$5433",
+                      "typeString": "contract IMedianizer"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1269:28:35"
+            },
+            "returnParameters": {
+              "id": 10527,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1315:0:35"
+            },
+            "scope": 10534,
+            "src": "1247:119:35",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 10535,
+        "src": "710:659:35"
+      }
+    ],
+    "src": "0:1371:35"
+  },
+  "legacyAST": {
+    "absolutePath": "/C/Users/Zyra/Desktop/pfk/tbtc/solidity/contracts/test/price-feed/IntermediaryMedianizer.sol",
+    "exportedSymbols": {
+      "IntermediaryMedianizer": [
+        10534
+      ]
+    },
+    "id": 10535,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 10473,
+        "literals": [
+          "solidity",
+          "0.5",
+          ".17"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:35"
+      },
+      {
+        "absolutePath": "openzeppelin-solidity/contracts/ownership/Ownable.sol",
+        "file": "openzeppelin-solidity/contracts/ownership/Ownable.sol",
+        "id": 10474,
+        "nodeType": "ImportDirective",
+        "scope": 10535,
+        "sourceUnit": 16916,
+        "src": "27:63:35",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/C/Users/Zyra/Desktop/pfk/tbtc/solidity/contracts/external/IMedianizer.sol",
+        "file": "../../../contracts/external/IMedianizer.sol",
+        "id": 10475,
+        "nodeType": "ImportDirective",
+        "scope": 10535,
+        "sourceUnit": 5434,
+        "src": "92:53:35",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 10476,
+              "name": "Ownable",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 16915,
+              "src": "745:7:35",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_Ownable_$16915",
+                "typeString": "contract Ownable"
+              }
+            },
+            "id": 10477,
+            "nodeType": "InheritanceSpecifier",
+            "src": "745:7:35"
+          },
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 10478,
+              "name": "IMedianizer",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 5433,
+              "src": "754:11:35",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_IMedianizer_$5433",
+                "typeString": "contract IMedianizer"
+              }
+            },
+            "id": 10479,
+            "nodeType": "InheritanceSpecifier",
+            "src": "754:11:35"
+          }
+        ],
+        "contractDependencies": [
+          5433,
+          16915
+        ],
+        "contractKind": "contract",
+        "documentation": "@title IntermediaryMedianizer is an updatable intermediary between a real\n        medianizer and IMedianizer users.\n @dev This is used in Keep testnets where Maker has deployed a Medianizer\n      instance that needs to authorize a single consumer, to enable multiple\n      tBTC deployments to happen in the background and be pointed at a stable\n      medianizer instance that is authorized on the Maker contract. It allows\n      the updating of the backing medianizer and therefore is NOT suitable\n      for mainnet deployment.",
+        "fullyImplemented": true,
+        "id": 10534,
+        "linearizedBaseContracts": [
+          10534,
+          5433,
+          16915
+        ],
+        "name": "IntermediaryMedianizer",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 10481,
+            "name": "_realMedianizer",
+            "nodeType": "VariableDeclaration",
+            "scope": 10534,
+            "src": "773:35:35",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_contract$_IMedianizer_$5433",
+              "typeString": "contract IMedianizer"
+            },
+            "typeName": {
+              "contractScope": null,
+              "id": 10480,
+              "name": "IMedianizer",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 5433,
+              "src": "773:11:35",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_IMedianizer_$5433",
+                "typeString": "contract IMedianizer"
+              }
+            },
+            "value": null,
+            "visibility": "private"
+          },
+          {
+            "body": {
+              "id": 10490,
+              "nodeType": "Block",
+              "src": "864:51:35",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 10488,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 10486,
+                      "name": "_realMedianizer",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 10481,
+                      "src": "875:15:35",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_IMedianizer_$5433",
+                        "typeString": "contract IMedianizer"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 10487,
+                      "name": "realMedianizer",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 10483,
+                      "src": "893:14:35",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_IMedianizer_$5433",
+                        "typeString": "contract IMedianizer"
+                      }
+                    },
+                    "src": "875:32:35",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IMedianizer_$5433",
+                      "typeString": "contract IMedianizer"
+                    }
+                  },
+                  "id": 10489,
+                  "nodeType": "ExpressionStatement",
+                  "src": "875:32:35"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 10491,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 10484,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 10483,
+                  "name": "realMedianizer",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 10491,
+                  "src": "829:26:35",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_IMedianizer_$5433",
+                    "typeString": "contract IMedianizer"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 10482,
+                    "name": "IMedianizer",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 5433,
+                    "src": "829:11:35",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IMedianizer_$5433",
+                      "typeString": "contract IMedianizer"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "828:28:35"
+            },
+            "returnParameters": {
+              "id": 10485,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "864:0:35"
+            },
+            "scope": 10534,
+            "src": "817:98:35",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 10498,
+              "nodeType": "Block",
+              "src": "984:41:35",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 10496,
+                    "name": "_realMedianizer",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 10481,
+                    "src": "1002:15:35",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IMedianizer_$5433",
+                      "typeString": "contract IMedianizer"
+                    }
+                  },
+                  "functionReturnParameters": 10495,
+                  "id": 10497,
+                  "nodeType": "Return",
+                  "src": "995:22:35"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 10499,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getMedianizer",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 10492,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "945:2:35"
+            },
+            "returnParameters": {
+              "id": 10495,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 10494,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 10499,
+                  "src": "971:11:35",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_IMedianizer_$5433",
+                    "typeString": "contract IMedianizer"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 10493,
+                    "name": "IMedianizer",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 5433,
+                    "src": "971:11:35",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IMedianizer_$5433",
+                      "typeString": "contract IMedianizer"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "970:13:35"
+            },
+            "scope": 10534,
+            "src": "923:102:35",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 10510,
+              "nodeType": "Block",
+              "src": "1087:48:35",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [],
+                    "expression": {
+                      "argumentTypes": [],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 10506,
+                        "name": "_realMedianizer",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 10481,
+                        "src": "1105:15:35",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_IMedianizer_$5433",
+                          "typeString": "contract IMedianizer"
+                        }
+                      },
+                      "id": 10507,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "peek",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 5432,
+                      "src": "1105:20:35",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_external_view$__$returns$_t_uint256_$_t_bool_$",
+                        "typeString": "function () view external returns (uint256,bool)"
+                      }
+                    },
+                    "id": 10508,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1105:22:35",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$_t_uint256_$_t_bool_$",
+                      "typeString": "tuple(uint256,bool)"
+                    }
+                  },
+                  "functionReturnParameters": 10505,
+                  "id": 10509,
+                  "nodeType": "Return",
+                  "src": "1098:29:35"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 10511,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "peek",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 10500,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1046:2:35"
+            },
+            "returnParameters": {
+              "id": 10505,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 10502,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 10511,
+                  "src": "1072:7:35",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 10501,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1072:7:35",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 10504,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 10511,
+                  "src": "1081:4:35",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 10503,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1081:4:35",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1071:15:35"
+            },
+            "scope": 10534,
+            "src": "1033:102:35",
+            "stateMutability": "view",
+            "superFunction": 5432,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 10520,
+              "nodeType": "Block",
+              "src": "1191:48:35",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [],
+                    "expression": {
+                      "argumentTypes": [],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 10516,
+                        "name": "_realMedianizer",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 10481,
+                        "src": "1209:15:35",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_IMedianizer_$5433",
+                          "typeString": "contract IMedianizer"
+                        }
+                      },
+                      "id": 10517,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "read",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 5425,
+                      "src": "1209:20:35",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_external_view$__$returns$_t_uint256_$",
+                        "typeString": "function () view external returns (uint256)"
+                      }
+                    },
+                    "id": 10518,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1209:22:35",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 10515,
+                  "id": 10519,
+                  "nodeType": "Return",
+                  "src": "1202:29:35"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 10521,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "read",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 10512,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1156:2:35"
+            },
+            "returnParameters": {
+              "id": 10515,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 10514,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 10521,
+                  "src": "1182:7:35",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 10513,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1182:7:35",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1181:9:35"
+            },
+            "scope": 10534,
+            "src": "1143:96:35",
+            "stateMutability": "view",
+            "superFunction": 5425,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 10532,
+              "nodeType": "Block",
+              "src": "1315:51:35",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 10530,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 10528,
+                      "name": "_realMedianizer",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 10481,
+                      "src": "1326:15:35",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_IMedianizer_$5433",
+                        "typeString": "contract IMedianizer"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 10529,
+                      "name": "realMedianizer",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 10523,
+                      "src": "1344:14:35",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_IMedianizer_$5433",
+                        "typeString": "contract IMedianizer"
+                      }
+                    },
+                    "src": "1326:32:35",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IMedianizer_$5433",
+                      "typeString": "contract IMedianizer"
+                    }
+                  },
+                  "id": 10531,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1326:32:35"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 10533,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [
+              {
+                "arguments": null,
+                "id": 10526,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 10525,
+                  "name": "onlyOwner",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 16848,
+                  "src": "1305:9:35",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_modifier$__$",
+                    "typeString": "modifier ()"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "1305:9:35"
+              }
+            ],
+            "name": "setMedianizer",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 10524,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 10523,
+                  "name": "realMedianizer",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 10533,
+                  "src": "1270:26:35",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_IMedianizer_$5433",
+                    "typeString": "contract IMedianizer"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 10522,
+                    "name": "IMedianizer",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 5433,
+                    "src": "1270:11:35",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IMedianizer_$5433",
+                      "typeString": "contract IMedianizer"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1269:28:35"
+            },
+            "returnParameters": {
+              "id": 10527,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1315:0:35"
+            },
+            "scope": 10534,
+            "src": "1247:119:35",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 10535,
+        "src": "710:659:35"
+      }
+    ],
+    "src": "0:1371:35"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.17+commit.d19bba13.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.3.1",
+  "updatedAt": "2020-10-27T11:33:58.702Z",
+  "devdoc": {
+    "details": "This is used in Keep testnets where Maker has deployed a Medianizer      instance that needs to authorize a single consumer, to enable multiple      tBTC deployments to happen in the background and be pointed at a stable      medianizer instance that is authorized on the Maker contract. It allows      the updating of the backing medianizer and therefore is NOT suitable      for mainnet deployment.",
+    "methods": {
+      "isOwner()": {
+        "details": "Returns true if the caller is the current owner."
+      },
+      "owner()": {
+        "details": "Returns the address of the current owner."
+      },
+      "renounceOwnership()": {
+        "details": "Leaves the contract without owner. It will not be possible to call `onlyOwner` functions anymore. Can only be called by the current owner.     * > Note: Renouncing ownership will leave the contract without an owner, thereby removing any functionality that is only available to the owner."
+      },
+      "transferOwnership(address)": {
+        "details": "Transfers ownership of the contract to a new account (`newOwner`). Can only be called by the current owner."
+      }
+    },
+    "title": "IntermediaryMedianizer is an updatable intermediary between a real        medianizer and IMedianizer users."
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

@@ -1,0 +1,1099 @@
+{
+  "contractName": "MockRelay",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "getCurrentEpochDifficulty",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "getPrevEpochDifficulty",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_current",
+          "type": "uint256"
+        }
+      ],
+      "name": "setCurrentEpochDifficulty",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_previous",
+          "type": "uint256"
+        }
+      ],
+      "name": "setPrevEpochDifficulty",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.17+commit.d19bba13\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[],\"name\":\"getCurrentEpochDifficulty\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"getPrevEpochDifficulty\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_current\",\"type\":\"uint256\"}],\"name\":\"setCurrentEpochDifficulty\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_previous\",\"type\":\"uint256\"}],\"name\":\"setPrevEpochDifficulty\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/C/Users/Zyra/Desktop/pfk/tbtc/solidity/contracts/test/relay/MockRelay.sol\":\"MockRelay\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/C/Users/Zyra/Desktop/pfk/tbtc/solidity/contracts/test/relay/MockRelay.sol\":{\"keccak256\":\"0xdb11f5a078ff8e6ff604e894e8daa0a2b867b80d22ce109cbf62973a596c3fb3\",\"urls\":[\"bzz-raw://c9cf9f0244e0a8440959de49c97e34ac84869fb0177f3fe7f28f2eb128e55bb4\",\"dweb:/ipfs/QmUkF4JE3uy5fqzrW7Y4eWbh31BbaRTWi19VwcoXFafQ6n\"]},\"@summa-tx/bitcoin-spv-sol/contracts/BTCUtils.sol\":{\"keccak256\":\"0x461cc52e40ba53e646f5c9505b992baa3d5b3c98ae5718561e61b3bc6c726d52\",\"urls\":[\"bzz-raw://90cf2e608b660671642a616ec044e2a39e8ceb7079315b6133ec978c47af9f98\",\"dweb:/ipfs/QmX4hyYS99RYWiQ7BwLXuvQpU5x62YbjJWLgYFwrPkYbzT\"]},\"@summa-tx/bitcoin-spv-sol/contracts/BytesLib.sol\":{\"keccak256\":\"0x43451fdb4c4d55c01122411a4cf89a5c544c2bd4b646ee1d1f306626275324bf\",\"urls\":[\"bzz-raw://db93f07c32fa294d416aaab1b19a205772f2a3fa573fd380e5641e7770193ccf\",\"dweb:/ipfs/QmVE4y8cFKWZGKEfTM9Q3YreAArpMTTALHNr2tcvcNDnbi\"]},\"@summa-tx/bitcoin-spv-sol/contracts/SafeMath.sol\":{\"keccak256\":\"0x22d34c04c68c2a77ee83e2ef3756f6e6bad6ad675560d777e612315d7eb83935\",\"urls\":[\"bzz-raw://b642c61be1d34e153e4f9cc139291fa26f4ecf31a3acc5b960aad20f4f689eeb\",\"dweb:/ipfs/QmWADdVTCSyvtgb76AxFFkAr9h9jbY57Mj5X6xiEqCqmMu\"]},\"@summa-tx/bitcoin-spv-sol/contracts/ValidateSPV.sol\":{\"keccak256\":\"0x9af3b3f36de63e95977f09548617989e391b3c511cf0383ee35cefd5da7d3bfd\",\"urls\":[\"bzz-raw://97ce025c7d18540e4c24578db61cc5e33828be8e9a82b5cb5f46c99212f75ed1\",\"dweb:/ipfs/QmRrdWnd95rgCZzeaNiU4KUcGe1j7oDBj7LatpXhUmjbEE\"]},\"@summa-tx/relay-sol/contracts/Interfaces.sol\":{\"keccak256\":\"0x6f2698f8aab5cee319f36d69438b6870496a5523e7ccac4b465cdb38661242fa\",\"urls\":[\"bzz-raw://7f854c72db81631d1df800ae0c5fb0a50dc9efd97b0e6593b063c9fb1c61ef9e\",\"dweb:/ipfs/QmUMSQhzYKRSkLTGcHekjqvw1mLpeUULZkfffRdN521NBg\"]},\"@summa-tx/relay-sol/contracts/OnDemandSPV.sol\":{\"keccak256\":\"0x56757b0c8220558cd8c34a8c2679d74b7fe4769c087d6539068608a1ccc1bce2\",\"urls\":[\"bzz-raw://625fee9260c177bcf13bcca7001cec542edb91e9f0150fc5f2943df5a9961877\",\"dweb:/ipfs/QmfJWuP4snnVYnpjHypJgZLxzBW17ZhnfPnzpBtt2yLAUG\"]},\"@summa-tx/relay-sol/contracts/Relay.sol\":{\"keccak256\":\"0x4a6d12fa6570e2c787f9dc234edae9c1eb326e78eb2c6384c84d2b6ba0a0ad7e\",\"urls\":[\"bzz-raw://fa5365dc5a8312d0305568dbf297964be13567a7879395bfc3e99be2510e4e10\",\"dweb:/ipfs/QmfGZz6iL45xPcwQTT3XFAqb7McuY89niBEvfbhy513moF\"]},\"@summa-tx/relay-sol/contracts/TestnetRelay.sol\":{\"keccak256\":\"0x04883856ccd9e6688d757af666ab04f0ab5e56bbb2f500966da3b27f3031366b\",\"urls\":[\"bzz-raw://204a0a0683bc53608086ed3ed0ef41b36bc96b5df5862fd0c2b72dfad0bf8541\",\"dweb:/ipfs/QmdVUw96EjBBks1cRnX6uCwXtsjJVR7P5zHhwaedjEfpFE\"]}},\"version\":1}",
+  "bytecode": "0x608060405260016000556001805534801561001957600080fd5b5060ea806100286000396000f3fe6080604052348015600f57600080fd5b506004361060465760003560e01c8063113764be14604b5780632b97be241460635780633c5e87521460695780637d4046fb146085575b600080fd5b6051609f565b60408051918252519081900360200190f35b605160a5565b608360048036036020811015607d57600080fd5b503560ab565b005b608360048036036020811015609957600080fd5b503560b0565b60005490565b60015490565b600155565b60005556fea265627a7a723158201dc5b3dc5cbbd8e8b68d6158e6844ee4deee0549ed5a295ec30c22e429097e5064736f6c63430005110032",
+  "deployedBytecode": "0x6080604052348015600f57600080fd5b506004361060465760003560e01c8063113764be14604b5780632b97be241460635780633c5e87521460695780637d4046fb146085575b600080fd5b6051609f565b60408051918252519081900360200190f35b605160a5565b608360048036036020811015607d57600080fd5b503560ab565b005b608360048036036020811015609957600080fd5b503560b0565b60005490565b60015490565b600155565b60005556fea265627a7a723158201dc5b3dc5cbbd8e8b68d6158e6844ee4deee0549ed5a295ec30c22e429097e5064736f6c63430005110032",
+  "sourceMap": "278:504:38:-;;;322:1;304:19;;349:1;330:20;;278:504;8:9:-1;5:2;;;30:1;27;20:12;5:2;278:504:38;;;;;;;",
+  "deployedSourceMap": "278:504:38:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;278:504:38;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;359:102;;;:::i;:::-;;;;;;;;;;;;;;;;469:100;;;:::i;682:97::-;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;682:97:38;;:::i;:::-;;577;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;577:97:38;;:::i;359:102::-;419:7;446;359:102;:::o;469:100::-;553:8;;469:100;:::o;682:97::-;751:8;:20;682:97::o;577:::-;648:7;:18;577:97::o",
+  "source": "pragma solidity 0.5.17;\r\n\r\n// Import of `TestnetRelay` will build artifacts for `TestnetRelay` and `OnDemandSPVProof`\r\n// that are required by the migration script but are not used for local contracts\r\n// deployment.\r\nimport \"@summa-tx/relay-sol/contracts/TestnetRelay.sol\";\r\n\r\ncontract MockRelay {\r\n    uint256 current = 1;\r\n    uint256 previous = 1;\r\n\r\n    function getCurrentEpochDifficulty() external view returns (uint256) {\r\n        return current;\r\n    }\r\n\r\n    function getPrevEpochDifficulty() external view returns (uint256) {\r\n        return previous;\r\n    }\r\n\r\n    function setCurrentEpochDifficulty(uint256 _current) public {\r\n        current = _current;\r\n    }\r\n\r\n    function setPrevEpochDifficulty(uint256 _previous) public {\r\n        previous = _previous;\r\n    }\r\n}\r\n",
+  "sourcePath": "C:/Users/Zyra/Desktop/pfk/tbtc/solidity/contracts/test/relay/MockRelay.sol",
+  "ast": {
+    "absolutePath": "/C/Users/Zyra/Desktop/pfk/tbtc/solidity/contracts/test/relay/MockRelay.sol",
+    "exportedSymbols": {
+      "MockRelay": [
+        10655
+      ]
+    },
+    "id": 10656,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 10611,
+        "literals": [
+          "solidity",
+          "0.5",
+          ".17"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:38"
+      },
+      {
+        "absolutePath": "@summa-tx/relay-sol/contracts/TestnetRelay.sol",
+        "file": "@summa-tx/relay-sol/contracts/TestnetRelay.sol",
+        "id": 10612,
+        "nodeType": "ImportDirective",
+        "scope": 10656,
+        "sourceUnit": 16561,
+        "src": "218:56:38",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 10655,
+        "linearizedBaseContracts": [
+          10655
+        ],
+        "name": "MockRelay",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 10615,
+            "name": "current",
+            "nodeType": "VariableDeclaration",
+            "scope": 10655,
+            "src": "304:19:38",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 10613,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "304:7:38",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "hexValue": "31",
+              "id": 10614,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "322:1:38",
+              "subdenomination": null,
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_1_by_1",
+                "typeString": "int_const 1"
+              },
+              "value": "1"
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 10618,
+            "name": "previous",
+            "nodeType": "VariableDeclaration",
+            "scope": 10655,
+            "src": "330:20:38",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 10616,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "330:7:38",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "hexValue": "31",
+              "id": 10617,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "349:1:38",
+              "subdenomination": null,
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_1_by_1",
+                "typeString": "int_const 1"
+              },
+              "value": "1"
+            },
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 10625,
+              "nodeType": "Block",
+              "src": "428:33:38",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 10623,
+                    "name": "current",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 10615,
+                    "src": "446:7:38",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 10622,
+                  "id": 10624,
+                  "nodeType": "Return",
+                  "src": "439:14:38"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 10626,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getCurrentEpochDifficulty",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 10619,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "393:2:38"
+            },
+            "returnParameters": {
+              "id": 10622,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 10621,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 10626,
+                  "src": "419:7:38",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 10620,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "419:7:38",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "418:9:38"
+            },
+            "scope": 10655,
+            "src": "359:102:38",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 10633,
+              "nodeType": "Block",
+              "src": "535:34:38",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 10631,
+                    "name": "previous",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 10618,
+                    "src": "553:8:38",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 10630,
+                  "id": 10632,
+                  "nodeType": "Return",
+                  "src": "546:15:38"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 10634,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getPrevEpochDifficulty",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 10627,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "500:2:38"
+            },
+            "returnParameters": {
+              "id": 10630,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 10629,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 10634,
+                  "src": "526:7:38",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 10628,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "526:7:38",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "525:9:38"
+            },
+            "scope": 10655,
+            "src": "469:100:38",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 10643,
+              "nodeType": "Block",
+              "src": "637:37:38",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 10641,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 10639,
+                      "name": "current",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 10615,
+                      "src": "648:7:38",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 10640,
+                      "name": "_current",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 10636,
+                      "src": "658:8:38",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "648:18:38",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 10642,
+                  "nodeType": "ExpressionStatement",
+                  "src": "648:18:38"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 10644,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setCurrentEpochDifficulty",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 10637,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 10636,
+                  "name": "_current",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 10644,
+                  "src": "612:16:38",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 10635,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "612:7:38",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "611:18:38"
+            },
+            "returnParameters": {
+              "id": 10638,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "637:0:38"
+            },
+            "scope": 10655,
+            "src": "577:97:38",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 10653,
+              "nodeType": "Block",
+              "src": "740:39:38",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 10651,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 10649,
+                      "name": "previous",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 10618,
+                      "src": "751:8:38",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 10650,
+                      "name": "_previous",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 10646,
+                      "src": "762:9:38",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "751:20:38",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 10652,
+                  "nodeType": "ExpressionStatement",
+                  "src": "751:20:38"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 10654,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setPrevEpochDifficulty",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 10647,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 10646,
+                  "name": "_previous",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 10654,
+                  "src": "714:17:38",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 10645,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "714:7:38",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "713:19:38"
+            },
+            "returnParameters": {
+              "id": 10648,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "740:0:38"
+            },
+            "scope": 10655,
+            "src": "682:97:38",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 10656,
+        "src": "278:504:38"
+      }
+    ],
+    "src": "0:784:38"
+  },
+  "legacyAST": {
+    "absolutePath": "/C/Users/Zyra/Desktop/pfk/tbtc/solidity/contracts/test/relay/MockRelay.sol",
+    "exportedSymbols": {
+      "MockRelay": [
+        10655
+      ]
+    },
+    "id": 10656,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 10611,
+        "literals": [
+          "solidity",
+          "0.5",
+          ".17"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:38"
+      },
+      {
+        "absolutePath": "@summa-tx/relay-sol/contracts/TestnetRelay.sol",
+        "file": "@summa-tx/relay-sol/contracts/TestnetRelay.sol",
+        "id": 10612,
+        "nodeType": "ImportDirective",
+        "scope": 10656,
+        "sourceUnit": 16561,
+        "src": "218:56:38",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 10655,
+        "linearizedBaseContracts": [
+          10655
+        ],
+        "name": "MockRelay",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 10615,
+            "name": "current",
+            "nodeType": "VariableDeclaration",
+            "scope": 10655,
+            "src": "304:19:38",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 10613,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "304:7:38",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "hexValue": "31",
+              "id": 10614,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "322:1:38",
+              "subdenomination": null,
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_1_by_1",
+                "typeString": "int_const 1"
+              },
+              "value": "1"
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 10618,
+            "name": "previous",
+            "nodeType": "VariableDeclaration",
+            "scope": 10655,
+            "src": "330:20:38",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 10616,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "330:7:38",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "hexValue": "31",
+              "id": 10617,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "349:1:38",
+              "subdenomination": null,
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_1_by_1",
+                "typeString": "int_const 1"
+              },
+              "value": "1"
+            },
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 10625,
+              "nodeType": "Block",
+              "src": "428:33:38",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 10623,
+                    "name": "current",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 10615,
+                    "src": "446:7:38",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 10622,
+                  "id": 10624,
+                  "nodeType": "Return",
+                  "src": "439:14:38"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 10626,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getCurrentEpochDifficulty",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 10619,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "393:2:38"
+            },
+            "returnParameters": {
+              "id": 10622,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 10621,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 10626,
+                  "src": "419:7:38",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 10620,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "419:7:38",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "418:9:38"
+            },
+            "scope": 10655,
+            "src": "359:102:38",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 10633,
+              "nodeType": "Block",
+              "src": "535:34:38",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 10631,
+                    "name": "previous",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 10618,
+                    "src": "553:8:38",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 10630,
+                  "id": 10632,
+                  "nodeType": "Return",
+                  "src": "546:15:38"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 10634,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getPrevEpochDifficulty",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 10627,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "500:2:38"
+            },
+            "returnParameters": {
+              "id": 10630,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 10629,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 10634,
+                  "src": "526:7:38",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 10628,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "526:7:38",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "525:9:38"
+            },
+            "scope": 10655,
+            "src": "469:100:38",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 10643,
+              "nodeType": "Block",
+              "src": "637:37:38",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 10641,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 10639,
+                      "name": "current",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 10615,
+                      "src": "648:7:38",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 10640,
+                      "name": "_current",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 10636,
+                      "src": "658:8:38",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "648:18:38",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 10642,
+                  "nodeType": "ExpressionStatement",
+                  "src": "648:18:38"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 10644,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setCurrentEpochDifficulty",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 10637,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 10636,
+                  "name": "_current",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 10644,
+                  "src": "612:16:38",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 10635,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "612:7:38",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "611:18:38"
+            },
+            "returnParameters": {
+              "id": 10638,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "637:0:38"
+            },
+            "scope": 10655,
+            "src": "577:97:38",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 10653,
+              "nodeType": "Block",
+              "src": "740:39:38",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 10651,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 10649,
+                      "name": "previous",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 10618,
+                      "src": "751:8:38",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 10650,
+                      "name": "_previous",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 10646,
+                      "src": "762:9:38",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "751:20:38",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 10652,
+                  "nodeType": "ExpressionStatement",
+                  "src": "751:20:38"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 10654,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setPrevEpochDifficulty",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 10647,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 10646,
+                  "name": "_previous",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 10654,
+                  "src": "714:17:38",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 10645,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "714:7:38",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "713:19:38"
+            },
+            "returnParameters": {
+              "id": 10648,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "740:0:38"
+            },
+            "scope": 10655,
+            "src": "682:97:38",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 10656,
+        "src": "278:504:38"
+      }
+    ],
+    "src": "0:784:38"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.17+commit.d19bba13.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.3.1",
+  "updatedAt": "2020-10-27T11:33:58.710Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

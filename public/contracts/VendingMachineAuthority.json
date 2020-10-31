@@ -1,0 +1,694 @@
+{
+  "contractName": "VendingMachineAuthority",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_vendingMachine",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.17+commit.d19bba13\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_vendingMachine\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"}],\"devdoc\":{\"details\":\"Secured by setting the VendingMachine address and using the         onlyVendingMachine modifier on functions requiring restriction.\",\"methods\":{},\"title\":\"Vending Machine Authority.\"},\"userdoc\":{\"methods\":{},\"notice\":\"Contract to secure function calls to the Vending Machine.\"}},\"settings\":{\"compilationTarget\":{\"/C/Users/Zyra/Desktop/pfk/tbtc/solidity/contracts/system/VendingMachineAuthority.sol\":\"VendingMachineAuthority\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/C/Users/Zyra/Desktop/pfk/tbtc/solidity/contracts/system/VendingMachineAuthority.sol\":{\"keccak256\":\"0x0a2c8c792ac8f277500421ba777263d6bf9a7cd2bc858864fc392643ed44df85\",\"urls\":[\"bzz-raw://d75e913db493dfdabc7eff09e82dbe5122042dba74b0d586e694579382e166e9\",\"dweb:/ipfs/QmWUjacRJSsT37MsoayNApibZaHhJ5JakAxbCfRUmAcjXb\"]}},\"version\":1}",
+  "bytecode": "0x6080604052348015600f57600080fd5b50604051609d380380609d83398181016040526020811015602f57600080fd5b5051600080546001600160a01b039092166001600160a01b0319909216919091179055603e80605f6000396000f3fe6080604052600080fdfea265627a7a723158204784c3f5d8b939c1de19c62f2dd403d9fc7454ba127dfca21af1811e7afd65b364736f6c63430005110032",
+  "deployedBytecode": "0x6080604052600080fdfea265627a7a723158204784c3f5d8b939c1de19c62f2dd403d9fc7454ba127dfca21af1811e7afd65b364736f6c63430005110032",
+  "sourceMap": "288:422:28:-;;;368:95;8:9:-1;5:2;;;30:1;27;20:12;5:2;368:95:28;;;;;;;;;;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;368:95:28;423:14;:32;;-1:-1:-1;;;;;423:32:28;;;-1:-1:-1;;;;;;423:32:28;;;;;;;;;288:422;;;;;;",
+  "deployedSourceMap": "288:422:28:-;;;;;",
+  "source": "pragma solidity 0.5.17;\r\n\r\n/// @title  Vending Machine Authority.\r\n/// @notice Contract to secure function calls to the Vending Machine.\r\n/// @dev    Secured by setting the VendingMachine address and using the\r\n///         onlyVendingMachine modifier on functions requiring restriction.\r\ncontract VendingMachineAuthority {\r\n    address internal VendingMachine;\r\n\r\n    constructor(address _vendingMachine) public {\r\n        VendingMachine = _vendingMachine;\r\n    }\r\n\r\n    /// @notice Function modifier ensures modified function caller address is the vending machine.\r\n    modifier onlyVendingMachine() {\r\n        require(msg.sender == VendingMachine, \"caller must be the vending machine\");\r\n        _;\r\n    }\r\n}\r\n",
+  "sourcePath": "C:\\Users\\Zyra\\Desktop\\pfk\\tbtc\\solidity\\contracts\\system\\VendingMachineAuthority.sol",
+  "ast": {
+    "absolutePath": "/C/Users/Zyra/Desktop/pfk/tbtc/solidity/contracts/system/VendingMachineAuthority.sol",
+    "exportedSymbols": {
+      "VendingMachineAuthority": [
+        9099
+      ]
+    },
+    "id": 9100,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 9074,
+        "literals": [
+          "solidity",
+          "0.5",
+          ".17"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:28"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": "@title  Vending Machine Authority.\n @notice Contract to secure function calls to the Vending Machine.\n @dev    Secured by setting the VendingMachine address and using the\n         onlyVendingMachine modifier on functions requiring restriction.",
+        "fullyImplemented": true,
+        "id": 9099,
+        "linearizedBaseContracts": [
+          9099
+        ],
+        "name": "VendingMachineAuthority",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 9076,
+            "name": "VendingMachine",
+            "nodeType": "VariableDeclaration",
+            "scope": 9099,
+            "src": "328:31:28",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 9075,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "328:7:28",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 9085,
+              "nodeType": "Block",
+              "src": "412:51:28",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 9083,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 9081,
+                      "name": "VendingMachine",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 9076,
+                      "src": "423:14:28",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 9082,
+                      "name": "_vendingMachine",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 9078,
+                      "src": "440:15:28",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "src": "423:32:28",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "id": 9084,
+                  "nodeType": "ExpressionStatement",
+                  "src": "423:32:28"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 9086,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 9079,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 9078,
+                  "name": "_vendingMachine",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 9086,
+                  "src": "380:23:28",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 9077,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "380:7:28",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "379:25:28"
+            },
+            "returnParameters": {
+              "id": 9080,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "412:0:28"
+            },
+            "scope": 9099,
+            "src": "368:95:28",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 9097,
+              "nodeType": "Block",
+              "src": "601:106:28",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "commonType": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        "id": 9092,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "argumentTypes": null,
+                          "expression": {
+                            "argumentTypes": null,
+                            "id": 9089,
+                            "name": "msg",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 18309,
+                            "src": "620:3:28",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_magic_message",
+                              "typeString": "msg"
+                            }
+                          },
+                          "id": 9090,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberName": "sender",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": null,
+                          "src": "620:10:28",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address_payable",
+                            "typeString": "address payable"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": "==",
+                        "rightExpression": {
+                          "argumentTypes": null,
+                          "id": 9091,
+                          "name": "VendingMachine",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 9076,
+                          "src": "634:14:28",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        },
+                        "src": "620:28:28",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "63616c6c6572206d757374206265207468652076656e64696e67206d616368696e65",
+                        "id": 9093,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "650:36:28",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_01e8e107888cab55d1a6d38683b8ae2a686fc7be8c07f265e1a04274c0c05b35",
+                          "typeString": "literal_string \"caller must be the vending machine\""
+                        },
+                        "value": "caller must be the vending machine"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        {
+                          "typeIdentifier": "t_stringliteral_01e8e107888cab55d1a6d38683b8ae2a686fc7be8c07f265e1a04274c0c05b35",
+                          "typeString": "literal_string \"caller must be the vending machine\""
+                        }
+                      ],
+                      "id": 9088,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        18312,
+                        18313
+                      ],
+                      "referencedDeclaration": 18313,
+                      "src": "612:7:28",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (bool,string memory) pure"
+                      }
+                    },
+                    "id": 9094,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "612:75:28",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 9095,
+                  "nodeType": "ExpressionStatement",
+                  "src": "612:75:28"
+                },
+                {
+                  "id": 9096,
+                  "nodeType": "PlaceholderStatement",
+                  "src": "698:1:28"
+                }
+              ]
+            },
+            "documentation": "@notice Function modifier ensures modified function caller address is the vending machine.",
+            "id": 9098,
+            "name": "onlyVendingMachine",
+            "nodeType": "ModifierDefinition",
+            "parameters": {
+              "id": 9087,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "598:2:28"
+            },
+            "src": "571:136:28",
+            "visibility": "internal"
+          }
+        ],
+        "scope": 9100,
+        "src": "288:422:28"
+      }
+    ],
+    "src": "0:712:28"
+  },
+  "legacyAST": {
+    "absolutePath": "/C/Users/Zyra/Desktop/pfk/tbtc/solidity/contracts/system/VendingMachineAuthority.sol",
+    "exportedSymbols": {
+      "VendingMachineAuthority": [
+        9099
+      ]
+    },
+    "id": 9100,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 9074,
+        "literals": [
+          "solidity",
+          "0.5",
+          ".17"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:28"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": "@title  Vending Machine Authority.\n @notice Contract to secure function calls to the Vending Machine.\n @dev    Secured by setting the VendingMachine address and using the\n         onlyVendingMachine modifier on functions requiring restriction.",
+        "fullyImplemented": true,
+        "id": 9099,
+        "linearizedBaseContracts": [
+          9099
+        ],
+        "name": "VendingMachineAuthority",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 9076,
+            "name": "VendingMachine",
+            "nodeType": "VariableDeclaration",
+            "scope": 9099,
+            "src": "328:31:28",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 9075,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "328:7:28",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 9085,
+              "nodeType": "Block",
+              "src": "412:51:28",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 9083,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 9081,
+                      "name": "VendingMachine",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 9076,
+                      "src": "423:14:28",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 9082,
+                      "name": "_vendingMachine",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 9078,
+                      "src": "440:15:28",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "src": "423:32:28",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "id": 9084,
+                  "nodeType": "ExpressionStatement",
+                  "src": "423:32:28"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 9086,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 9079,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 9078,
+                  "name": "_vendingMachine",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 9086,
+                  "src": "380:23:28",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 9077,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "380:7:28",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "379:25:28"
+            },
+            "returnParameters": {
+              "id": 9080,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "412:0:28"
+            },
+            "scope": 9099,
+            "src": "368:95:28",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 9097,
+              "nodeType": "Block",
+              "src": "601:106:28",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "commonType": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        "id": 9092,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "argumentTypes": null,
+                          "expression": {
+                            "argumentTypes": null,
+                            "id": 9089,
+                            "name": "msg",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 18309,
+                            "src": "620:3:28",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_magic_message",
+                              "typeString": "msg"
+                            }
+                          },
+                          "id": 9090,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberName": "sender",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": null,
+                          "src": "620:10:28",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address_payable",
+                            "typeString": "address payable"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": "==",
+                        "rightExpression": {
+                          "argumentTypes": null,
+                          "id": 9091,
+                          "name": "VendingMachine",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 9076,
+                          "src": "634:14:28",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        },
+                        "src": "620:28:28",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "63616c6c6572206d757374206265207468652076656e64696e67206d616368696e65",
+                        "id": 9093,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "650:36:28",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_01e8e107888cab55d1a6d38683b8ae2a686fc7be8c07f265e1a04274c0c05b35",
+                          "typeString": "literal_string \"caller must be the vending machine\""
+                        },
+                        "value": "caller must be the vending machine"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        {
+                          "typeIdentifier": "t_stringliteral_01e8e107888cab55d1a6d38683b8ae2a686fc7be8c07f265e1a04274c0c05b35",
+                          "typeString": "literal_string \"caller must be the vending machine\""
+                        }
+                      ],
+                      "id": 9088,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        18312,
+                        18313
+                      ],
+                      "referencedDeclaration": 18313,
+                      "src": "612:7:28",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (bool,string memory) pure"
+                      }
+                    },
+                    "id": 9094,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "612:75:28",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 9095,
+                  "nodeType": "ExpressionStatement",
+                  "src": "612:75:28"
+                },
+                {
+                  "id": 9096,
+                  "nodeType": "PlaceholderStatement",
+                  "src": "698:1:28"
+                }
+              ]
+            },
+            "documentation": "@notice Function modifier ensures modified function caller address is the vending machine.",
+            "id": 9098,
+            "name": "onlyVendingMachine",
+            "nodeType": "ModifierDefinition",
+            "parameters": {
+              "id": 9087,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "598:2:28"
+            },
+            "src": "571:136:28",
+            "visibility": "internal"
+          }
+        ],
+        "scope": 9100,
+        "src": "288:422:28"
+      }
+    ],
+    "src": "0:712:28"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.17+commit.d19bba13.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.3.1",
+  "updatedAt": "2020-10-27T11:33:58.653Z",
+  "devdoc": {
+    "details": "Secured by setting the VendingMachine address and using the         onlyVendingMachine modifier on functions requiring restriction.",
+    "methods": {},
+    "title": "Vending Machine Authority."
+  },
+  "userdoc": {
+    "methods": {},
+    "notice": "Contract to secure function calls to the Vending Machine."
+  }
+}

@@ -1,0 +1,417 @@
+{
+  "contractName": "ITokenRecipient",
+  "abi": [
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_from",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_value",
+          "type": "uint256"
+        },
+        {
+          "internalType": "address",
+          "name": "_token",
+          "type": "address"
+        },
+        {
+          "internalType": "bytes",
+          "name": "_extraData",
+          "type": "bytes"
+        }
+      ],
+      "name": "receiveApproval",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.17+commit.d19bba13\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":false,\"inputs\":[{\"internalType\":\"address\",\"name\":\"_from\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"_value\",\"type\":\"uint256\"},{\"internalType\":\"address\",\"name\":\"_token\",\"type\":\"address\"},{\"internalType\":\"bytes\",\"name\":\"_extraData\",\"type\":\"bytes\"}],\"name\":\"receiveApproval\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{\"receiveApproval(address,uint256,address,bytes)\":{\"params\":{\"_extraData\":\"An additional data blob forwarded unmodified through        `approveAndCall`, used to allow the token owner to pass         additional parameters and data to this method. The structure of         the extra data is informally specified by the implementor of         this interface.\",\"_from\":\"The original owner of the token approved for transfer.\",\"_token\":\"The address of the contract for the token whose transfer        was approved.\",\"_value\":\"For an ERC20, the amount approved for transfer; for an        ERC721, the id of the token approved for transfer.\"}}},\"title\":\"Interface of recipient contract for `approveAndCall` pattern.        Implementors will be able to be used in an `approveAndCall`        interaction with a supporting contract, such that a token approval        can call the contract acting on that approval in a single        transaction. \\r        See the `FundingScript` and `RedemptionScript` contracts as examples.\"},\"userdoc\":{\"methods\":{\"receiveApproval(address,uint256,address,bytes)\":{\"notice\":\"Typically called from a token contract's `approveAndCall` method, this method will receive the original owner of the token (`_from`), the transferred `_value` (in the case of an ERC721, the token id), the token address (`_token`), and a blob of `_extraData` that is informally specified by the implementor of this method as a way to communicate additional parameters. \\r Token calls to `receiveApproval` should revert if `receiveApproval` reverts, and reverts should remove the approval. \\r\"}}}},\"settings\":{\"compilationTarget\":{\"/C/Users/Zyra/Desktop/pfk/tbtc/solidity/contracts/interfaces/ITokenRecipient.sol\":\"ITokenRecipient\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/C/Users/Zyra/Desktop/pfk/tbtc/solidity/contracts/interfaces/ITokenRecipient.sol\":{\"keccak256\":\"0x054255ae492efda6bbe5177e90c57514a29f7111d525981a608decbd8662d9c1\",\"urls\":[\"bzz-raw://a279b1d2fff37395e6e653e57a5b3a40b8eb2e717ca0b4eeda5b1db3ba218341\",\"dweb:/ipfs/Qmav87Nce3MXDA5yUtBoa3te2VC5jEMAk59bC1oX8vss45\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "pragma solidity 0.5.17;\r\n\r\n/// @title Interface of recipient contract for `approveAndCall` pattern.\r\n///        Implementors will be able to be used in an `approveAndCall`\r\n///        interaction with a supporting contract, such that a token approval\r\n///        can call the contract acting on that approval in a single\r\n///        transaction.\r\n///\r\n///        See the `FundingScript` and `RedemptionScript` contracts as examples.\r\ninterface ITokenRecipient {\r\n    /// Typically called from a token contract's `approveAndCall` method, this\r\n    /// method will receive the original owner of the token (`_from`), the\r\n    /// transferred `_value` (in the case of an ERC721, the token id), the token\r\n    /// address (`_token`), and a blob of `_extraData` that is informally\r\n    /// specified by the implementor of this method as a way to communicate\r\n    /// additional parameters.\r\n    ///\r\n    /// Token calls to `receiveApproval` should revert if `receiveApproval`\r\n    /// reverts, and reverts should remove the approval.\r\n    ///\r\n    /// @param _from The original owner of the token approved for transfer.\r\n    /// @param _value For an ERC20, the amount approved for transfer; for an\r\n    ///        ERC721, the id of the token approved for transfer.\r\n    /// @param _token The address of the contract for the token whose transfer\r\n    ///        was approved.\r\n    /// @param _extraData An additional data blob forwarded unmodified through\r\n    ///        `approveAndCall`, used to allow the token owner to pass\r\n    ///         additional parameters and data to this method. The structure of\r\n    ///         the extra data is informally specified by the implementor of\r\n    ///         this interface.\r\n    function receiveApproval(\r\n        address _from,\r\n        uint256 _value,\r\n        address _token,\r\n        bytes calldata _extraData\r\n    ) external;\r\n}\r\n",
+  "sourcePath": "C:\\Users\\Zyra\\Desktop\\pfk\\tbtc\\solidity\\contracts\\interfaces\\ITokenRecipient.sol",
+  "ast": {
+    "absolutePath": "/C/Users/Zyra/Desktop/pfk/tbtc/solidity/contracts/interfaces/ITokenRecipient.sol",
+    "exportedSymbols": {
+      "ITokenRecipient": [
+        5525
+      ]
+    },
+    "id": 5526,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 5513,
+        "literals": [
+          "solidity",
+          "0.5",
+          ".17"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:12"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": "@title Interface of recipient contract for `approveAndCall` pattern.\n        Implementors will be able to be used in an `approveAndCall`\n        interaction with a supporting contract, such that a token approval\n        can call the contract acting on that approval in a single\n        transaction.\n\r\n        See the `FundingScript` and `RedemptionScript` contracts as examples.",
+        "fullyImplemented": false,
+        "id": 5525,
+        "linearizedBaseContracts": [
+          5525
+        ],
+        "name": "ITokenRecipient",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": "Typically called from a token contract's `approveAndCall` method, this\n method will receive the original owner of the token (`_from`), the\n transferred `_value` (in the case of an ERC721, the token id), the token\n address (`_token`), and a blob of `_extraData` that is informally\n specified by the implementor of this method as a way to communicate\n additional parameters.\n\r\n Token calls to `receiveApproval` should revert if `receiveApproval`\n reverts, and reverts should remove the approval.\n\r\n @param _from The original owner of the token approved for transfer.\n @param _value For an ERC20, the amount approved for transfer; for an\n        ERC721, the id of the token approved for transfer.\n @param _token The address of the contract for the token whose transfer\n        was approved.\n @param _extraData An additional data blob forwarded unmodified through\n        `approveAndCall`, used to allow the token owner to pass\n         additional parameters and data to this method. The structure of\n         the extra data is informally specified by the implementor of\n         this interface.",
+            "id": 5524,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "receiveApproval",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 5522,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 5515,
+                  "name": "_from",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5524,
+                  "src": "1753:13:12",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 5514,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1753:7:12",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 5517,
+                  "name": "_value",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5524,
+                  "src": "1777:14:12",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 5516,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1777:7:12",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 5519,
+                  "name": "_token",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5524,
+                  "src": "1802:14:12",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 5518,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1802:7:12",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 5521,
+                  "name": "_extraData",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5524,
+                  "src": "1827:25:12",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_calldata_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 5520,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1827:5:12",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1742:117:12"
+            },
+            "returnParameters": {
+              "id": 5523,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1868:0:12"
+            },
+            "scope": 5525,
+            "src": "1718:151:12",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          }
+        ],
+        "scope": 5526,
+        "src": "434:1438:12"
+      }
+    ],
+    "src": "0:1874:12"
+  },
+  "legacyAST": {
+    "absolutePath": "/C/Users/Zyra/Desktop/pfk/tbtc/solidity/contracts/interfaces/ITokenRecipient.sol",
+    "exportedSymbols": {
+      "ITokenRecipient": [
+        5525
+      ]
+    },
+    "id": 5526,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 5513,
+        "literals": [
+          "solidity",
+          "0.5",
+          ".17"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:12"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": "@title Interface of recipient contract for `approveAndCall` pattern.\n        Implementors will be able to be used in an `approveAndCall`\n        interaction with a supporting contract, such that a token approval\n        can call the contract acting on that approval in a single\n        transaction.\n\r\n        See the `FundingScript` and `RedemptionScript` contracts as examples.",
+        "fullyImplemented": false,
+        "id": 5525,
+        "linearizedBaseContracts": [
+          5525
+        ],
+        "name": "ITokenRecipient",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": "Typically called from a token contract's `approveAndCall` method, this\n method will receive the original owner of the token (`_from`), the\n transferred `_value` (in the case of an ERC721, the token id), the token\n address (`_token`), and a blob of `_extraData` that is informally\n specified by the implementor of this method as a way to communicate\n additional parameters.\n\r\n Token calls to `receiveApproval` should revert if `receiveApproval`\n reverts, and reverts should remove the approval.\n\r\n @param _from The original owner of the token approved for transfer.\n @param _value For an ERC20, the amount approved for transfer; for an\n        ERC721, the id of the token approved for transfer.\n @param _token The address of the contract for the token whose transfer\n        was approved.\n @param _extraData An additional data blob forwarded unmodified through\n        `approveAndCall`, used to allow the token owner to pass\n         additional parameters and data to this method. The structure of\n         the extra data is informally specified by the implementor of\n         this interface.",
+            "id": 5524,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "receiveApproval",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 5522,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 5515,
+                  "name": "_from",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5524,
+                  "src": "1753:13:12",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 5514,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1753:7:12",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 5517,
+                  "name": "_value",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5524,
+                  "src": "1777:14:12",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 5516,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1777:7:12",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 5519,
+                  "name": "_token",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5524,
+                  "src": "1802:14:12",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 5518,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1802:7:12",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 5521,
+                  "name": "_extraData",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5524,
+                  "src": "1827:25:12",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_calldata_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 5520,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1827:5:12",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1742:117:12"
+            },
+            "returnParameters": {
+              "id": 5523,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1868:0:12"
+            },
+            "scope": 5525,
+            "src": "1718:151:12",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          }
+        ],
+        "scope": 5526,
+        "src": "434:1438:12"
+      }
+    ],
+    "src": "0:1874:12"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.17+commit.d19bba13.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.3.1",
+  "updatedAt": "2020-10-27T11:33:58.536Z",
+  "devdoc": {
+    "methods": {
+      "receiveApproval(address,uint256,address,bytes)": {
+        "params": {
+          "_extraData": "An additional data blob forwarded unmodified through        `approveAndCall`, used to allow the token owner to pass         additional parameters and data to this method. The structure of         the extra data is informally specified by the implementor of         this interface.",
+          "_from": "The original owner of the token approved for transfer.",
+          "_token": "The address of the contract for the token whose transfer        was approved.",
+          "_value": "For an ERC20, the amount approved for transfer; for an        ERC721, the id of the token approved for transfer."
+        }
+      }
+    },
+    "title": "Interface of recipient contract for `approveAndCall` pattern.        Implementors will be able to be used in an `approveAndCall`        interaction with a supporting contract, such that a token approval        can call the contract acting on that approval in a single        transaction. \r        See the `FundingScript` and `RedemptionScript` contracts as examples."
+  },
+  "userdoc": {
+    "methods": {
+      "receiveApproval(address,uint256,address,bytes)": {
+        "notice": "Typically called from a token contract's `approveAndCall` method, this method will receive the original owner of the token (`_from`), the transferred `_value` (in the case of an ERC721, the token id), the token address (`_token`), and a blob of `_extraData` that is informally specified by the implementor of this method as a way to communicate additional parameters. \r Token calls to `receiveApproval` should revert if `receiveApproval` reverts, and reverts should remove the approval. \r"
+      }
+    }
+  }
+}
