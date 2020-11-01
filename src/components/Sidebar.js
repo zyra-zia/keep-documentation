@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from "react-router-dom";
+import ExternalIcon from "./ExternalIcon";
 
 class Sidebar extends React.Component {
     render(){
@@ -141,13 +142,13 @@ class Sidebar extends React.Component {
                 </h6>
                 <ul className="nav flex-column mb-2">
                   <li className="nav-item">
-                    <a href="https://github.com/keep-network" className="nav-link">Github</a>
+                    <a href="https://github.com/keep-network" className="nav-link">Github<ExternalIcon/></a>
                   </li>
                   <li className="nav-item">
-                    <a href="https://blog.keep.network/" className="nav-link">Blog</a>
+                    <a href="https://blog.keep.network/" className="nav-link">Blog<ExternalIcon/></a>
                   </li>
                   <li className="nav-item">
-                    <a href="https://discord.com/invite/wYezN7v" className="nav-link">Discord</a>
+                    <a href="https://discord.com/invite/wYezN7v" className="nav-link">Discord<ExternalIcon/></a>
                   </li>
                 </ul>
               </div>
