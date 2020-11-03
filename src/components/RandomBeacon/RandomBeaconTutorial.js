@@ -1,5 +1,6 @@
 import React from "react"
 import {Link} from "react-router-dom"
+import Highlight from "react-highlight.js"
 
 function RandomBeaconTutorial() {
     return (
@@ -26,25 +27,26 @@ function RandomBeaconTutorial() {
                 </p>
                 <div className="col-12">
                     Here is a javascript code snippet showing an example call to the random beacon:
-                    <pre>
-                        
-                        // example web3Providers are metamask, infura etc.<br/>
+                    <Highlight language="javascript">
+                    {`
+                        // example web3Providers are metamask, infura etc.
                         const web3 = new Web3(web3Provider);
-                        <br/><br/>
-                        //randomBeaconJsonInterface is the contract abi for the random beacon<br/>
-                        const beaconContract = new web3.eth.Contract(randomBeaconJsonInterface);
-                        <br/><br/>
-                        //walletAddress is the users ethereum address<br/>
-                        const relayId = await beaconContract.methods.requestRelayEntry().send(&#123;from: walletAddress&#125;);
-                        <br/><br/>
-                        beaconContract.RelayEntryGenerated().watch((error, result) =&gt; &#123;<br/>
-                        &nbsp;&nbsp;&nbsp;&nbsp;if (error)<br/>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;console.log(error);<br/>
-                        &nbsp;&nbsp;&nbsp;&nbsp;else<br/>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;console.log('random number: ' + JSON.stringify(result.args));<br/>
-                        &#125;);<br/>
                         
-                    </pre> 
+                        //randomBeaconJsonInterface is the contract abi for the random beacon
+                        //randomBeaconAddress is the deployed address of the KeepRandomBeaconServiceImplV1 contract
+                        const beaconContract = new web3.eth.Contract(randomBeaconJsonInterface, randomBeaconAddress);
+                        
+                        //walletAddress is the users ethereum address
+                        const relayId = await beaconContract.methods.requestRelayEntry().send({from: walletAddress});
+                        
+                        beaconContract.RelayEntryGenerated().watch((error, result) => {
+                            if (error)
+                                console.log(error);
+                            else
+                                console.log('random number: ' + JSON.stringify(result.args));
+                        });
+                    `}
+                    </Highlight>
                 </div>
             </div>
         </div>

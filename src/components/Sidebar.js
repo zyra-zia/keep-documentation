@@ -12,60 +12,6 @@ class Sidebar extends React.Component {
                     <Link to="/" className="nav-link" >Home</Link>
                   </li>
                   <li className="nav-item">
-                    <button className="menu" type="button" data-toggle="collapse" data-target="#beaconMenu" aria-expanded="false" aria-controls="collapseExample">
-                        <Link to="/random-beacon" className="nav-link">Random Beacon</Link>
-                    </button>
-                    <div className="collapse" id="beaconMenu">
-                        <div className="card card-body">
-                            <ul>
-                                <li className="nav-item">
-                                    <Link to="/random-beacon/guide" className="nav-link" >Development Guide</Link>
-                                </li>
-                                <li className="nav-item">
-                                    <Link to="/random-beacon/api" className="nav-link" >API Documentation</Link>
-                                </li>
-                                <li className="nav-item">
-                                    <Link to="/random-beacon/resources" className="nav-link" >Resources</Link>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                  </li>
-                  <li className="nav-item">
-                    <button className="menu" type="button" data-toggle="collapse" data-target="#ecdsaMenu" aria-expanded="false" aria-controls="collapseExample">
-                        <Link to="/ecdsa" className="nav-link">ECDSA</Link>
-                    </button>
-                    <div className="collapse" id="ecdsaMenu">
-                        <div className="card card-body">
-                            <ul>
-                                <li className="nav-item">
-                                    <Link to="/ecdsa/guide" className="nav-link" >Development Guide</Link>
-                                </li>
-                                <li className="nav-item">
-                                    <button className="menu" type="button" data-toggle="collapse" data-target="#ecdsaAPIMenu" aria-expanded="false" aria-controls="collapseExample">
-                                        <Link to="/ecdsa/api" className="nav-link" >API Documentation</Link>
-                                    </button>
-                                    <div className="collapse" id="ecdsaAPIMenu">
-                                        <div>
-                                            <ul>
-                                                <li className="nav-item">
-                                                    <Link to="/ecdsa/api/IBondedECDSAKeep" className="nav-link" >- IBondedECDSAKeep</Link>
-                                                </li>
-                                                <li className="nav-item">
-                                                    <Link to="/ecdsa/api/IBondedECDSAKeepFactory" className="nav-link" >-IBondedECDSAKeepFactory</Link>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li className="nav-item">
-                                    <Link to="/ecdsa/resources" className="nav-link" >Resources</Link>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                  </li>
-                  <li className="nav-item">
                     <button className="menu" type="button" data-toggle="collapse" data-target="#tbtcMenu" aria-expanded="false" aria-controls="collapseExample">
                         <Link to="/tbtc" className="nav-link">TBTC</Link>
                     </button>
@@ -130,6 +76,60 @@ class Sidebar extends React.Component {
                                 </li>
                                 <li className="nav-item">
                                     <Link to="/tbtc/resources" className="nav-link" >Resources</Link>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                  </li>
+                  <li className="nav-item">
+                    <button className="menu" type="button" data-toggle="collapse" data-target="#beaconMenu" aria-expanded="false" aria-controls="collapseExample">
+                        <Link to="/random-beacon" className="nav-link">Random Beacon</Link>
+                    </button>
+                    <div className="collapse" id="beaconMenu">
+                        <div className="card card-body">
+                            <ul>
+                                <li className="nav-item">
+                                    <Link to="/random-beacon/guide" className="nav-link" >Development Guide</Link>
+                                </li>
+                                <li className="nav-item">
+                                    <Link to="/random-beacon/api" className="nav-link" >API Documentation</Link>
+                                </li>
+                                <li className="nav-item">
+                                    <Link to="/random-beacon/resources" className="nav-link" >Resources</Link>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                  </li>
+                  <li className="nav-item">
+                    <button className="menu" type="button" data-toggle="collapse" data-target="#ecdsaMenu" aria-expanded="false" aria-controls="collapseExample">
+                        <Link to="/ecdsa" className="nav-link">ECDSA</Link>
+                    </button>
+                    <div className="collapse" id="ecdsaMenu">
+                        <div className="card card-body">
+                            <ul>
+                                <li className="nav-item">
+                                    <Link to="/ecdsa/guide" className="nav-link" >Development Guide</Link>
+                                </li>
+                                <li className="nav-item">
+                                    <button className="menu" type="button" data-toggle="collapse" data-target="#ecdsaAPIMenu" aria-expanded="false" aria-controls="collapseExample">
+                                        <Link to="/ecdsa/api" className="nav-link" >API Documentation</Link>
+                                    </button>
+                                    <div className="collapse" id="ecdsaAPIMenu">
+                                        <div>
+                                            <ul>
+                                                <li className="nav-item">
+                                                    <Link to="/ecdsa/api/IBondedECDSAKeep" className="nav-link" >- IBondedECDSAKeep</Link>
+                                                </li>
+                                                <li className="nav-item">
+                                                    <Link to="/ecdsa/api/IBondedECDSAKeepFactory" className="nav-link" >-IBondedECDSAKeepFactory</Link>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li className="nav-item">
+                                    <Link to="/ecdsa/resources" className="nav-link" >Resources</Link>
                                 </li>
                             </ul>
                         </div>

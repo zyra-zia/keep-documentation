@@ -50,16 +50,9 @@ body {
     font-size: 0.8rem;
     color: gray;
   }
-  
-  .beacon-guide code, .tbtc-guide code { 
-    background: hsl(220, 80%, 90%); 
-  }
 
-  .beacon-guide pre, .tbtc-guide pre {
-      white-space: pre-wrap;
-      background: hsl(220, 80%, 90%); 
-      padding: 30px;
-      margin: 20px 0;
+  code.hljs {
+    margin: 25px 0;
   }
 
   .beacon-intro .card a.btn.btn-primary, .ecdsa-intro .card a.btn.btn-primary, .home .card a.btn.btn-primary {
